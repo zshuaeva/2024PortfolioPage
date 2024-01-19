@@ -1,0 +1,50 @@
+.navigation-container{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: green;
+}
+
+
+.page-links{
+  display: flex;
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.stryker-icon{
+  height: 50px;
+  padding: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+.linkedin,
+.github {
+  margin-right: 5px;
+}
+
+.linkedin-icon{
+  background-color: lightblue;
+  height: 40px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.github-icon{
+  background-color: orange;
+  height: 40px;
+  padding: 2px;
+  border-radius: 10px;
+}
