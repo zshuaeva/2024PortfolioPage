@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 .navigation-container{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -7,12 +9,16 @@
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  color: green;
+  color: black;
 }
 
 
 .page-links{
   display: flex;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  font-size: large;
 }
 
 .social-links{
@@ -33,6 +39,15 @@
 .linkedin,
 .github {
   margin-right: 5px;
+}
+
+.projects-link,
+.contact-link,
+.resume-link {
+  margin-right: 10px;
+  background-color: grey;
+  border-radius: 10px;
+  padding: 13px;
 }
 
 .linkedin-icon{

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 .page-one-container {
   position: relative;
@@ -16,6 +17,7 @@
   padding-left: 30px;
   padding-right: 30px;
   text-align: left;
+  font-family: "Lato", sans-serif;
 }
 
 
@@ -25,7 +27,7 @@
 }
 
 .headshot-img {
-  max-height: 450px;
+  max-height: 50%;
   width: auto;
   position: absolute;
   top: 40%;

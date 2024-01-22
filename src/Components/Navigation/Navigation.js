@@ -24,6 +24,9 @@ const Navigation = () => {
         <div className="contact-link">
           Contact
         </div>
+        <div className="resume-link">
+          Resume
+        </div>
 
         <div className="social-links">
           <div className="linkedin">
