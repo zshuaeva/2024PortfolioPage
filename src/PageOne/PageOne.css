@@ -1,4 +1,38 @@
-.page-one-background{
+
+.page-one-container {
+  position: relative;
+}
+
+.biography-app{
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border-radius: 10px;
+  max-width: 50%;
+  max-height: 100%;
+  overflow: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+
+.page-one-background {
   width: 100%;
   height: auto;
+}
+
+.headshot-img {
+  max-height: 450px;
+  width: auto;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  outline: auto;
+  outline-color: grey;
+  outline-offset: 3px;
 }
