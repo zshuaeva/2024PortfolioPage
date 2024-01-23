@@ -22,7 +22,7 @@ import docker from '../../assets/icons/docker.ico';
 import postgres from '../../assets/icons/postgres.ico';
 import html from '../../assets/icons/html.ico';
 import mongo from '../../assets/icons/mongodb.svg';
-import { Tooltip } from 'react-tooltip';
+
 
 const ProjectsCarousel = () => {
   const handleProjectSelect = (description) => {
