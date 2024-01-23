@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import './Navigation.css'
 import linkedInLogo from '../assets/icons/linkedin.ico'
 import gitHubLogo from '../assets/icons/github.svg'
@@ -16,7 +16,25 @@ const Navigation = () => {
     }
   };
 
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newOpacity = 1 - scrollPosition / 70;
+      setOpacity(newOpacity < 0 ? 0 : newOpacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
+    <nav className={`navigation ${opacity === 0 ? 'hidden' : ''}`} style={{ opacity, pointerEvents: opacity === 0 ? 'none' : 'auto' }}>
     <div className="navigation-container">
       <div className="stryker-home">
         <div className="home" onClick={scrollToTop}>
@@ -50,6 +68,7 @@ const Navigation = () => {
         </div>
       </div>
     </div>
+    </nav>
   )
 };
 

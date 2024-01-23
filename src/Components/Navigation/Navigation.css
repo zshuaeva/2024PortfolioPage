@@ -63,3 +63,8 @@
   padding: 2px;
   border-radius: 10px;
 }
+
+
+.hidden {
+  display: none;
+}
