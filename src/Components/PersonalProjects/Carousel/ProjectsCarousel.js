@@ -12,8 +12,6 @@ import closetify from '../../assets/projectPhotos/closetify.png';
 import carcar from '../../assets/projectPhotos/carcar.png';
 import golfpilot from '../../assets/projectPhotos/golfpilot.png';
 
-import LogoLarge from '../../assets/icons/LogoLarge.png';
-
 import js from '../../assets/icons/javascript.png';
 import dj from '../../assets/icons/django.ico';
 import sql from '../../assets/icons/sql.ico';
@@ -36,19 +34,7 @@ const ProjectsCarousel = () => {
 
 
   const myProjects = [
-    {
-      name: 'Portfolio Page',
-      description:
-        'This portfolio page was built as a single page application using React.js, CSS stylesheets, Bootstrap, Materials UI, Google Firebase, and Semantic UI. Crafted for simplicity to effectively showcase my resume, LinkedIn profile, projects, and direct contact. The icons listed in each project resemble the tech stack used for each respective project; hover over the icons to view!',
-      img: LogoLarge,
-      stack: [
-        [react, 'React.js'],
-        [js, 'Javascript'],
-        [css, 'CSS'],
-        [html, 'HTML5'],
-      ],
-      url: 'https://github.com/zshuaeva/portfolio-page',
-    },
+
     {
       name: 'Golf Pilot',
       description:
@@ -147,29 +133,33 @@ const ProjectsCarousel = () => {
     },
   ];
 
-
   return (
     <>
-      <Carousel showArrows={true} onChange={(index) => handleProjectSelect(myProjects[index].description)}>
+      <Carousel showArrows={true} onChange={(index) => handleProjectSelect(myProjects[index].description)} >
         {myProjects.map((project, index) => (
-          <div key={index} className='carousel-container'>
-            <img src={project.img} alt={project.name} className='carousel-photo' />
-            <h3 className='project-name'>{project.name}</h3>
-            <p className='project-description'>{project.description}</p>
-            <div>
-              {project.stack.map(([icon, label]) => (
-                <Tooltip key={label} title={label}>
-                  <img src={icon} alt={label} />
-                </Tooltip>
-              ))}
+          <div key={index} className="carousel-module" >
+
+            <div className='carousel-photo'>
+              <img src={project.img} alt={project.name}/>
             </div>
+
+            <div className='project-name'>
+              <h3>{project.name}</h3>
+            </div>
+
+            <div className='project-description'>
+              <p>{project.description}</p>
+            </div>
+            <div className='git-link'>
             <a href={project.url} target="_blank" rel="noopener noreferrer">
               View on GitHub
             </a>
+            </div>
+
           </div>
         ))}
       </Carousel>
-      <Projects selectedDescription={selectedDescription} />
+      <Projects selectedDescription={selectedDescription}/>
     </>
   );
 };

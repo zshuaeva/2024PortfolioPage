@@ -4,13 +4,9 @@ import './Projects.css'
 
 const Projects = ({ selectedDescription }) => {
   return (
+    <>
+    </>
 
-    <Box className="projects-container">
-      <div className="projects-header">
-        <header>Projects</header>
-      </div>
-      <p>{selectedDescription}</p>
-    </Box>
   );
 };
 

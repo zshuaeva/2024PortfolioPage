@@ -8,7 +8,7 @@ import Footer
 function App() {
   return (
     <div className="App">
-      <div className="navigation">
+      <div className="navigation" id='top-nav'>
         <Navigation />
       </div>
       <div className="page-one">

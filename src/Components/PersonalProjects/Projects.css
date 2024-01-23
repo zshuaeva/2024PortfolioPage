@@ -1,4 +1,10 @@
-.projects-header{
+.projects-container{
   font-size: larger;
   font-weight: 700;
+  z-index: 1000;
+  background-color: teal;
+}
+
+.projects-description {
+  background-color: green;
 }

@@ -3,6 +3,8 @@ import './Navigation.css'
 import linkedInLogo from '../assets/icons/linkedin.ico'
 import gitHubLogo from '../assets/icons/github.svg'
 import stryker from '../assets/icons/stryker.png'
+import newTab from '../assets/icons/new-tab.png'
+import resume from '../assets/Joshua_Evangelista_resume.pdf'
 
 const Navigation = () => {
   const scrollToTop = () => {
@@ -50,9 +52,15 @@ const Navigation = () => {
         <div className="contact-link">
           Contact
         </div>
+        <a href={ resume } target="_blank" rel="noopener noreferrer">
         <div className="resume-link">
           Resume
         </div>
+        </a>
+
+        <a href={ resume } target="_blank" rel="noopener noreferrer">
+        <img src={newTab} alt='new tab' className="tab-icon" />
+        </a>
 
         <div className="social-links">
           <div className="linkedin">
@@ -73,3 +81,8 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+<a href={require('../assets/Joshua_Evangelista_resume.pdf')} target="_blank" rel="noopener noreferrer" className="resume-link">
+  Resume
+  <img src={newTab} alt='new tab' className="tab-icon" />
+</a>

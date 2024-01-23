@@ -33,17 +33,20 @@
 .sticky-nav-links a {
   text-decoration: underline;
   color: inherit;
-  margin-right: 20px;
+  margin-right: 10%;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   text-underline-offset: 5px;
   text-transform: uppercase;
   transform: skew(-9deg);
-
 }
 
 
 .sticky-nav-links a:hover,
 .sticky-nav-links a:focus {
   color: rgb(176, 180, 190);
+}
+
+.sticky-project {
+  cursor: pointer;
 }

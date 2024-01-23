@@ -9,9 +9,6 @@ const PageTwo = () => {
   return(
     <div className="page-two-container" id="second-nav" >
       <StickyNav />
-      <div className="projects-app" id="projects-app">
-        <Projects />
-      </div>
 
       <div className="carousel-app">
         <ProjectsCarousel />
