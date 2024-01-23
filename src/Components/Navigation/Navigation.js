@@ -9,6 +9,13 @@ const Navigation = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="navigation-container">
       <div className="stryker-home">
@@ -18,9 +25,10 @@ const Navigation = () => {
       </div>
 
       <div className="page-links">
-        <div className="projects-link">
+        <div className="projects-link" onClick={() => scrollToSection('second-nav')}>
           Projects
         </div>
+
         <div className="contact-link">
           Contact
         </div>
