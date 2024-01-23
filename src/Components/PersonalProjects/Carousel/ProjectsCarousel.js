@@ -156,6 +156,14 @@ const ProjectsCarousel = () => {
             </a>
             </div>
 
+            <div className="project-stack-container">
+
+              {project.stack.map((stackItem, index) => (
+              <img key={index} src={stackItem[0]} alt={stackItem[1]} className="stack-icon-photo" />
+              ))}
+            </div>
+
+
           </div>
         ))}
       </Carousel>

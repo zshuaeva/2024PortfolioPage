@@ -47,3 +47,16 @@
 .git-link a {
   color: grey;
 }
+
+.project-stack-container{
+ display: flex;
+ margin: 10;
+ padding-top: 20px;
+}
+
+.stack-icon-photo{
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
