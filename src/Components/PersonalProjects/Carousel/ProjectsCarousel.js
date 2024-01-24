@@ -135,7 +135,7 @@ const ProjectsCarousel = () => {
 
   return (
     <>
-      <Carousel showArrows={true} onChange={(index) => handleProjectSelect(myProjects[index].description)} >
+      <Carousel showThumbs={false} showArrows={true} onChange={(index) => handleProjectSelect(myProjects[index].description)} >
         {myProjects.map((project, index) => (
           <div key={index} className="carousel-module" >
 

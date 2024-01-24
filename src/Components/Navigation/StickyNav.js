@@ -26,7 +26,7 @@ const StickyNav = () => {
         <div className='sticky-project' onClick={() => scrollToSection('top-nav')} >Projects</div>
         </a>
         <a>
-        <div className='sticky-project' onClick={() => scrollToSection('top-nav')} >Contact</div>
+        <div className='sticky-project' onClick={() => scrollToSection('bottom-page')} >Contact</div>
         </a>
         <a href={ resume } target="_blank" rel="noopener noreferrer">
         <div className='sticky-project' onClick={() => scrollToSection('top-nav')} >Resume</div>

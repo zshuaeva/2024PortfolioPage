@@ -2,3 +2,15 @@
   width: 100%;
   height: auto;
 }
+
+.messenger-box {
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 50px;
+  border-radius: 20px;
+}

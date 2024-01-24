@@ -1,31 +1,25 @@
 import React from 'react';
-import { Form, Input, TextArea, Button } from 'semantic-ui-react';
-import './Messenger.css';
-import Swal from 'sweetalert2';
+import { TextField, Button } from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 import emailjs from 'emailjs-com';
+import './Messenger.css'
+
 const SERVICE_ID = 'service_iczzxjs';
 const TEMPLATE_ID = 'template_pylh739';
 const USER_ID = 'Y5lSOCntPPnDU1-3e';
 
-function Messenger() {
-  const handleOnSubmit = e => {
+const Messenger = () => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-      .then(result => {
+      .then((result) => {
         console.log(result.text);
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent Successfully',
-        });
+        alert('Message Sent Successfully');
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.text);
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops, something went wrong',
-          text: error.text,
-        });
+        alert('Oops, something went wrong: ' + error.text);
       });
     e.target.reset();
   };
@@ -33,42 +27,53 @@ function Messenger() {
   return (
     <div className="page-container">
       <div className="contact-form custom-input-field">
-        <Form onSubmit={handleOnSubmit}>
-          <Form.Field
+        <form onSubmit={handleOnSubmit}>
+          <TextField
             id="form-input-control-email"
-            control={Input}
             label="Email"
             name="user_email"
-            placeholder="Email…"
+            type="email"
+            margin="normal"
+            fullWidth
             required
-            icon="mail"
-            iconPosition="left"
+            InputProps={{
+              startAdornment: <i className="fas fa-envelope"></i>,
+            }}
           />
-          <Form.Field
+
+          <TextField
             id="form-input-control-last-name"
-            control={Input}
             label="Name"
             name="user_name"
-            placeholder="Name…"
+            type="text"
+            margin="normal"
+            fullWidth
             required
-            icon="user circle"
-            iconPosition="left"
+            InputProps={{
+              startAdornment: <i className="fas fa-user-circle"></i>,
+            }}
           />
-          <Form.Field
+
+          <TextField
             id="form-textarea-control-opinion"
-            control={TextArea}
             label="Message"
+            placeholder="Type message here..."
             name="user_message"
-            placeholder="Message…"
+            margin="normal"
+            multiline
+            rows={6}
+            fullWidth
             required
+            color="success"
           />
-          <Button type="submit" color="yellow">
+
+          <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>
-        </Form>
+        </form>
       </div>
     </div>
   );
-}
+};
 
 export default Messenger;

@@ -1,7 +1,6 @@
 import React from "react";
 import pageTwoBackground from "../Components/assets/backgrounds/page-two-background.jpg"
 import './PageTwo.css'
-import Projects from "../Components/PersonalProjects/Projects";
 import ProjectsCarousel from "../Components/PersonalProjects/Carousel/ProjectsCarousel";
 import StickyNav from "../Components/Navigation/StickyNav";
 

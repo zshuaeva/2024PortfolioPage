@@ -49,7 +49,7 @@ const Navigation = () => {
           Projects
         </div>
 
-        <div className="contact-link">
+        <div className="contact-link" onClick={() => scrollToSection('bottom-page')}>
           Contact
         </div>
         <a href={ resume } target="_blank" rel="noopener noreferrer">
