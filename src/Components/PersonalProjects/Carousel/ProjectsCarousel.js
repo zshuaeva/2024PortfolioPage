@@ -26,7 +26,6 @@ import mongo from '../../assets/icons/mongodb.svg';
 
 const ProjectsCarousel = () => {
   const handleProjectSelect = (description) => {
-    console.log('Selected Description:', description);
     setSelectedDescription(description);
   };
 

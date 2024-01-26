@@ -14,11 +14,9 @@ const Messenger = () => {
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
-        console.log(result.text);
         alert('Message Sent Successfully');
       })
       .catch((error) => {
-        console.log(error.text);
         alert('Oops, something went wrong: ' + error.text);
       });
     e.target.reset();
