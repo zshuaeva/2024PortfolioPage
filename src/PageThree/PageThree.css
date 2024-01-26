@@ -5,7 +5,7 @@
 
 .messenger-box {
   position: absolute;
-  top: 250%;
+  top: 2000px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

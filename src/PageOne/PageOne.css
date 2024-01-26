@@ -12,8 +12,8 @@
   color: white;
   border-radius: 10px;
   max-width: 50%;
-  max-height: 100%;
-  overflow: auto;
+  max-height: 60%;
+  overflow: scroll;
   padding-left: 30px;
   padding-right: 30px;
   text-align: left;
@@ -33,7 +33,7 @@
   top: 45%;
   left: 30%;
   transform: translate(-50%, -50%);
-  border-radius: 50px;
+  border-radius: 30% 25px;
   outline: auto;
   outline-color: grey;
   outline-offset: 3px;

@@ -11,7 +11,7 @@ const Footer= () => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 2000) {
+    if (window.scrollY > 1500) {
       setShowBackToTop(true);
     } else {
       setShowBackToTop(false);
