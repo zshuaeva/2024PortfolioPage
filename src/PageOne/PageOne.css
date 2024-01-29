@@ -13,7 +13,7 @@
   border-radius: 10px;
   max-width: 50%;
   max-height: 60%;
-  overflow: scroll;
+  overflow: hidden;
   padding-left: 30px;
   padding-right: 30px;
   text-align: left;
