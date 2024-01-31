@@ -9,7 +9,7 @@ const PageOne = () => {
   return (
     <div className="page-one-container">
         <Biography />
-
+        {/* testing */}
       <div className="headshot-img-container">
           <img src={LogoLarge}  alt='headshot' className="headshot-img" />
         </div>
