@@ -1,14 +1,15 @@
 import React from "react";
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import './Biography.css'
+import { Typography, Box } from "@mui/material";
 
 const Biography = () => {
   return(
     <Box className="biography-container">
-      <div className="biography-header">
+      <Box className="biography-header">
         <header>About Me</header>
-        </div>
-      <p>I'm equipped with a diverse technical toolkit that includes JavaScript, Python, React, Django, RESTful APIs, FastAPI, SQL, and Docker. My past in operations has honed a robust work ethic in me, a tenacious problem-solving mindset, and an attention to efficiency and precision, rendering me a versatile player in any team.</p>
+        </Box>
+      <Typography>I'm equipped with a diverse technical toolkit that includes JavaScript, Python, React, Django, RESTful APIs, FastAPI, SQL, and Docker. My past in operations has honed a robust work ethic in me, a tenacious problem-solving mindset, and an attention to efficiency and precision, rendering me a versatile player in any team.</Typography>
 
       <p>After a rewarding career in retail banking, I've recently undergone a transformative journey through Hack Reactor's advanced software engineering program. Now, I stand at the intersection of my past experience and newfound technical proficiency, ready to embrace new challenges in the tech industry.</p>
 
