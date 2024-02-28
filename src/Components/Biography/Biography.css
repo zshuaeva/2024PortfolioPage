@@ -29,3 +29,16 @@
   width: 0;
   height: 0;
 }
+
+@media (max-width: 1100px) {
+  .biography-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust the width to take the whole page */
+    height: 70%; /* Adjust the height to take the whole page */
+    max-width: none; /* Remove max-width constraint */
+    max-height: none; /* Remove max-height constraint */
+  }
+}

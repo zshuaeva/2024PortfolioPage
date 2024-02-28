@@ -7,6 +7,8 @@ import newTab from '../assets/icons/new-tab.png'
 import resume from '../assets/Joshua_Evangelista_resume.pdf'
 
 const Navigation = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -21,6 +23,10 @@ const Navigation = () => {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const newOpacity = 1 - scrollPosition / 70;
@@ -28,6 +34,8 @@ const Navigation = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -40,17 +48,24 @@ const Navigation = () => {
     <div className="navigation-container">
       <div className="stryker-home">
         <div className="home" onClick={scrollToTop}>
+        {windowWidth >= 1100 && (
           <img src={stryker} alt="LinkedIn" className="stryker-icon" />
+        )}
         </div>
       </div>
 
       <div className="page-links">
+
         <div className="projects-link" onClick={() => scrollToSection('second-nav')}>
-          Projects
+        {windowWidth >= 1100 && (
+          'Projects'
+        )}
         </div>
 
         <div className="contact-link" onClick={() => scrollToSection('bottom-page')}>
-          Contact
+        {windowWidth >= 1100 && (
+          'Contact'
+        )}
         </div>
         <a href={ resume } target="_blank" rel="noopener noreferrer">
         <div className="resume-link">
